@@ -9,7 +9,7 @@ function sendVerificationEmail(string $email, string $code): bool {
     $body = "<p>Your verification code is: <strong>$code</strong></p>";
     $headers  = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: prajapatikrish132005@gmail.com\r\n";
+    $headers .= "From: no-reply@example.com\r\n";
     return mail($email, $subject, $body, $headers);
 }
 
@@ -66,7 +66,7 @@ function sendXKCDUpdatesToSubscribers(): void {
         $subject = "Your XKCD Comic";
         $headers  = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-        $headers .= "From: prajapatikrish132005@gmail.com\r\n";
+        $headers .= "From: no-reply@example.com\r\n";
         mail($email, $subject, $body, $headers);
     }
 }

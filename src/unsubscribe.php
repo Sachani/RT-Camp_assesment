@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $body = "<p>To confirm un-subscription, use this code: <strong>$code</strong></p>";
             $headers  = "MIME-Version: 1.0\r\n";
             $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-            $headers .= "From: prajapatikrish132005@gmail.com\r\n";
+            $headers .= "From: no-reply@example.com\r\n";
             mail($email, $subject, $body, $headers);
             $messages[] = "Unsubscription verification code sent to $email.";
             $last_email = $email;
